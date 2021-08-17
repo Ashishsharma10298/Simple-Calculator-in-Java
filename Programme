@@ -1,0 +1,105 @@
+import java.util.Scanner;
+class SimpeCalculator {
+	public static void main(String[] args) {
+		int choice;
+		Scanner sc=new Scanner(System.in);
+		do{
+			System.out.println("WELCOME TO THE PROGRAMMING ");
+			System.out.println("Enter your choice = ");
+			System.out.println("1. To add");
+			System.out.println("2. To substract");
+			System.out.println("3. To divide");
+			System.out.println("4. To modulo ");
+			System.out.println("5. To Square");
+			System.out.println("6. To square root.");
+			System.out.println("7. To Exit.");
+			choice=sc.nextInt();
+			if(choice==7)
+			{
+				System.out.println("Thank You...");
+			}
+			switch(choice)
+			{
+			case 1:
+				add();
+				break;
+			case 2:
+				sub();
+				break;
+			case 3:
+				div();
+				break;
+			case 4:
+				modu();
+				break;
+			case 5:
+				sq();
+				break;
+			case 6:
+				int spp;
+				System.out.println("Enter number = ");
+				spp=sc.nextInt();
+				System.out.println("square root = "+Math.sqrt(spp));
+				break;
+			}
+		}while(choice!=7);                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+
+	}
+static	void add()
+	{
+		int n;
+		int b;
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter first number = ");
+		n=s.nextInt();
+		System.out.println("Enter second number = ");
+		b=s.nextInt();
+		int sum;
+		sum=n+b;
+		System.out.println("Sum = "+sum);
+	}
+  static void sub()
+  {
+	  int x,y;
+	  Scanner in=new Scanner(System.in);
+	  System.out.println("Enter first number = ");
+	  x=in.nextInt();
+	  System.out.println("Enter second number = ");
+	  y=in.nextInt();
+	  int z;
+	  z=x-y;
+	  System.out.println("substraction = "+z);
+  }
+  static void div()
+  {
+	  int d,r;
+	  float res;
+	  Scanner rs=new Scanner(System.in);
+	  System.out.println("Enter divident = ");
+	  d=rs.nextInt();
+	  System.out.println("Enter divisor = ");
+	  r=rs.nextInt();
+	  res=d/r;
+	  System.out.println("Queotient = "+res);
+  }
+  static void modu()
+  {
+	  int big,sm,rem;
+	  Scanner scan=new Scanner(System.in);
+	  System.out.println("Enter number = ");
+	  big=scan.nextInt();
+	  System.out.println("Enter moduler = ");
+	  sm=scan.nextInt();
+	  rem=big%sm;
+	  System.out.println("Reminder or modulo  = "+rem);
+  }
+  static void sq()
+  {
+	  int sq1;
+	  System.out.println("Enter Number = ");
+	  Scanner nd=new Scanner(System.in);
+	  sq1=nd.nextInt();
+	  sq1=sq1*sq1;
+	  System.out.println("Square = "+sq1);
+  }
+}
